@@ -1,0 +1,22 @@
+@url_base = http://localhost:5196/api/evento
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiYWRtIiwiVXN1YXJpb0lkIjoiMSIsImV4cCI6MTc0NjQ5NDM5NX0.NijAxRsAGIqrIXY_Goz0CbVBDB9xWJxlBbkVmcXf9g0
+
+### Cadastrar evento
+POST {{url_base}}/cadastrar
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "nome": "Evento de Teste",
+  "local": "Local do Evento",
+  "descricao": "Descrição do evento",
+  "data": "2025-06-01T20:00:00"
+}
+
+### Listar todos os eventos
+GET {{url_base}}/listar
+Authorization: Bearer {{token}}
+
+### Listar eventos do usuário logado
+GET {{url_base}}/usuario
+Authorization: Bearer {{token}}
